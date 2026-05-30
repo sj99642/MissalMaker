@@ -1,0 +1,3 @@
+[submodule "missalemeum"]
+	path = missalemeum
+	url = git@github.com:mmolenda/missalemeum.git
