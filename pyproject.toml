@@ -1,0 +1,15 @@
+[project]
+name = "missal-maker"
+version = "1.0.0"
+dependencies = [
+    "click",
+    "python-dateutil",
+    # "missalemeum-backend @ file:./missalemeum/backend"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+mm-date = "date:main"
