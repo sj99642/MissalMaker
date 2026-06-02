@@ -43,7 +43,13 @@
 \begin{document}
 
 \begin{center}
-{\LARGE \textbf{\textsc{Holy Mass}}} \\ \vspace{1cm}
+{\LARGE \textbf{\textsc{Holy Mass}}} \\
+{\textbf{ ((( date ))) }} \\
+{\textbf{ ((( title ))) ((( '(' + rank + ')' ))) }} \\
+((* for ct in commemoration_titles *))
+Commemoration: ((( ct )))
+((* endfor *))
+\vspace{0.5cm}
 \end{center}
 
 \begin{paracol}{2}
