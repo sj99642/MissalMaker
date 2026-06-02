@@ -1,0 +1,56 @@
+% Source - https://tex.stackexchange.com/a/505562
+% Posted by Davislor, modified by community. See post 'Timeline' for change history
+% Retrieved 2026-06-02, License - CC BY-SA 4.0
+
+\documentclass[a6paper,pagesize,12pt]{book}
+\usepackage[layout=a5paper, vmargin=0.4in, tmargin=0.6in, hmargin=0.6in,
+            paperheight=216mm, paperwidth=154mm, showframe=false
+           ]{geometry}
+\usepackage[svgnames]{xcolor}
+\usepackage[latin, main=english]{babel}
+\usepackage{fontspec, microtype, parskip, paracol}
+
+\defaultfontfeatures{Scale=MatchUppercase}
+\babelfont{rm}
+          [Scale=1.0,
+           Language=Default,
+           Ligatures={Common, TeX}
+          ]{TeX Gyre Schola} % Or your font of choice.
+
+\newfontfamily\symbolfont{DejaVu Sans}
+
+\pagenumbering{gobble}
+\setlength\columnseprule{0.4pt}
+\setlength\columnsep{1em}
+\columnratio{0.6}
+\sloppy
+
+\newcommand\kom[1]{ {\vspace{0.2cm}\begin{center}\footnotesize \color{red} #1 \end{center}}}
+\newcommand\propertitle[1]{\small \color{red} #1 }
+\newcommand{\+}{ {\symbolfont\symbol{"2720}}} % Maltese cross.
+
+
+\newcommand\chunks[2]{%
+\begin{leftcolumn*}\begin{otherlanguage}{english}%
+{#1}%
+\end{otherlanguage}\end{leftcolumn*}%
+\begin{rightcolumn}\begin{otherlanguage}{latin}%
+\footnotesize
+{#2}%
+\end{otherlanguage}\end{rightcolumn}%
+}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{\textsc{Holy Mass}}} \\ \vspace{1cm}
+\end{center}
+
+\begin{paracol}{2}
+       ((* for prop_en, prop_ln in propers *))
+       \chunks{\propertitle{\textbf{ ((( prop_en['label'] ))) }}}{\propertitle{\textbf{ ((( prop_ln['label'] ))) }}}
+       \chunks{ ((( prop_en['body'] ))) }{ ((( prop_ln['body'] ))) }
+       ((* endfor *))
+\end{paracol}
+
+\end{document}
