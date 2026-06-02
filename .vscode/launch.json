@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/src/date.py",
             "console": "integratedTerminal",
-            "args": "2026-06-01",
+            "args": "2026-02-23",
             "justMyCode": false
         }
     ]
